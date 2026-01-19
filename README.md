@@ -31,14 +31,16 @@ En esta segunda etapa, transformé los títulares usando TF-IDF (Term Frequency 
 Modelos entrenados
 1. Modelo Regresión logística (clasificación lineal)
 Este modelo se comportó de forma estable. Las categorías ENTERTAINMENT, FOOD & DRINK, DIVORCE y CRIME tienen un buen recall y un buen f1-score.
+
 Ejemplo con la categoría Entertaiment:
-Precision: de las veces que el modelo dijo que esta era la categoría el 0.57 fueron correctas.
-Recall: de todas las noticias que si eran esta categoría, el modelo solo detecto 0.77.
-f1-score: obtuvó un buen balance entre precision y recall del 0.65.
-Support: hay 3473 noticias reales de esta categoría.
+- Precision: de las veces que el modelo dijo que esta era la categoría el 0.57 fueron correctas.
+- Recall: de todas las noticias que si eran esta categoría, el modelo solo detecto 0.77.
+- f1-score: obtuvó un buen balance entre precision y recall del 0.65.
+- Support: hay 3473 noticias reales de esta categoría.
 
 2. Modelo Naive Bayes
 En este modelo pasó algo muy importante, se imprimió un WARNING "UndefinedMetricWarning", esto significa que el modelo nunca predijo algunas categorías. 
+
 Ejemplo: ARTS & CULTURE, presenta un precision y recall de 0.00.
 Esto porque Naive Bayes se basa en probabilidades, favorece las categorías dominantes y es sensible al desbalance que presenta el dataset.
 
