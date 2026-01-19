@@ -45,11 +45,11 @@ Ejemplo: ARTS & CULTURE, presenta un precision y recall de 0.00.
 Esto porque Naive Bayes se basa en probabilidades, favorece las categorías dominantes y es sensible al desbalance que presenta el dataset.
 
 ## 3. Evaluación
-En la etapa de evaluación, para ambos moodelos de clasificación agregué la métrica average="magro" para poder tratar todas las categorías por igual y que el análisis no se deje dominar por las clases grandes. 
+En la etapa de evaluación, para ambos modelos de clasificación agregué la métrica average="magro" para poder tratar todas las categorías por igual y que el análisis no se deje dominar por las clases grandes. 
 
 Para el modelo de Regresión Logística, hice la matriz de confusión la cual debido a su gran número de categorías, se volvió densa y dificil de interpretar visualmente. Para esto sería más util si se enfocara únicamente en las clases más frecuentes. 
 
-En base a los resultados obtenidos elegí como modelo final el de Regresión Logística debido a su rendimiento más equilibrado en todas las categorías. A diferencia de Naive Bayes, fue capaz de generar predicciones para las clases con menor número de noticias. Además de que su Acurracy dio como resultado 0.58, es decir que el 58% de los titulares fueron clasificados correctamente y así presentando un todas las métricas de evaluación mejores resultados. 
+En base a los resultados obtenidos elegí como modelo final el de Regresión Logística debido a su rendimiento más equilibrado en todas las categorías. A diferencia de Naive Bayes, fue capaz de generar predicciones para las clases con menor número de noticias. Además de que su Acurracy dio como resultado 0.58, es decir que el 58% de los titulares fueron clasificados correctamente y así presentando en todas las métricas de evaluación mejores resultados. 
 
 ## 4. API de inferencia
 Instrucciones para probar API:
