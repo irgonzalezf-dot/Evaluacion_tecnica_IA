@@ -51,11 +51,28 @@ En base a los resultados obtenidos elegí como modelo final el de Regresión Log
 
 ## 4. API de inferencia
 Instrucciones para probar API:
-1. Es necesario crear una carpeta con los archivos adjuntos (
-2. 
-3. 
-4
-
-
-
-
+1. Es necesario descargar y guardar la carpeta "news-headline-api" en tu PC. Dentro de la carpeta estan los archivos (app.py, news_modelo.pkl, requirements.txt y tfidf_vectorizer.pkl).
+4. En tu PC abre Windows Power Shell presionando Windows + X.
+5. Ve a la carpeta "news-headline-api" guardada en tu PC y copia su ruta.
+6. Regresa al Winddows Power Shell y escribe "cd + la ruta", + Enter.
+(Ejemplo: cd C:\Users\rubyf\Documents\news-headline-api)
+7. Una vez rediccionado a la carpeta. Escribe "pip install -r requirements.txt", + Enter para instalar las dependencias. 
+4. Una vez instaladas, ahí mismo en PowerShell ejecuta "uvicorn app:app --reload" + Enter.
+5. Cuando veas "Application startup complete" sin cerrar la pestaña de PowerShell:
+6. Abre tu navegador y entra a "http://127.0.0.1:8000/docs"
+6.1. Veras una pantalla interactiva.
+6.2. Abre POST/predict
+6.3. Click en "Try it out"
+6.4. Escribe un ejemplo de título:
+   "headline": "Federal Reserve raises interest rates again"
+   "headline": "New Exhibition Brings Together Key Works of Contemporary Art"
+6.5. Click en Execute
+6.6. Mira abajo en la sección que dice "Response body", y veras algo como:
+   {
+  "headline": "Federal Reserve raises interest rates again",
+  "predicted_category": "BUSINESS"
+}
+Aquí es donde se muestra la categoría que se predice de acuerdo al headline.
+8. Para detener la API, entra al PowerShell, y en el comando ejecuta "CTRL + C". 
+   
+El archivo "news_modelo.pkl", es el modelo entrenado de Regresión Logística que elegí como modelo final para esta evaluación y "tfidf_vectorizer.pkl" es el vectorizador TF-IDF. 
