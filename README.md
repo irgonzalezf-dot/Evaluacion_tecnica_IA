@@ -9,7 +9,7 @@ Archivo data.json que contiene:
 - Category: categoría de la noticia.
 
 ## 1. Análisis exploratorio de datos (EDA)
-En esta primera etapa se analizó el conjunto de datos que contiene titulares de noticias y su categoría asociada.
+En esta primera etapa analicé el conjunto de datos que contiene titulares de noticias y su categoría asociada.
 
 Actividades realizadas:
 - Normalización de datos desde formato JSON.
@@ -20,7 +20,7 @@ Actividades realizadas:
 Hallazgos relevantes:
 - Los datos originales se encontraban en formato JSON no normalizado, por lo que fue necesario reconstruir el DataFrame para obtener una estructura tabular adecuada.
 - No se detectaron valores nulos en los campos headline y category, por lo que no fue necesario un proceso de imputación.
-- Se observó un desbalance de clases, donde algunas categorías concentran una mayor cantidad de noticias que otras. Este desbalance influye directamente en la evaluación de los modelos y justifica el uso de métricas macro explicadas en la evaluación de los modelos utilizados. 
+- Existe un desbalance de clases, donde algunas categorías concentran una mayor cantidad de noticias que otras. Este desbalance influye directamente en la evaluación de los modelos y justifica el uso de métricas macro explicadas en la evaluación de los modelos utilizados. 
 
 ## 2. Preparación y entrenamiento de modelos 
 En esta segunda etapa, transformé los títulares usando TF-IDF (Term Frequency – Inverse Document Frequency) para convertir el texto en características numéricas y entrené dos modelos de clasificación diferentes para comparar enfoques lineales y probabilísticos para la predicción de categorías de noticias. 
@@ -43,9 +43,9 @@ Ejemplo: ARTS & CULTURE, presenta un precision y recall de 0.00.
 Esto porque Naive Bayes se basa en probabilidades, favorece las categorías dominantes y es sensible al desbalance que presenta el dataset.
 
 ## 3. Evaluación
-En la etapa de evaluación, para ambos moodelos de clasificación se agregó la métrica average="magro" para poder tratar todas las categorías por igual y que el análisis no se deje dominar por las clases grandes. 
+En la etapa de evaluación, para ambos moodelos de clasificación agregué la métrica average="magro" para poder tratar todas las categorías por igual y que el análisis no se deje dominar por las clases grandes. 
 
-Para el modelo de Regresión Logística, se hizo la matriz de confusión la cual debido a su gran número de categorías, se volvió densa y dificil de interpretar visualmente. Para esto sería más util si se enfocara únicamente en las clases más frecuentes. 
+Para el modelo de Regresión Logística, hice la matriz de confusión la cual debido a su gran número de categorías, se volvió densa y dificil de interpretar visualmente. Para esto sería más util si se enfocara únicamente en las clases más frecuentes. 
 
 En base a los resultados obtenidos elegí como modelo final el de Regresión Logística debido a su rendimiento más equilibrado en todas las categorías. A diferencia de Naive Bayes, fue capaz de generar predicciones para las clases con menor número de noticias. Además de que su Acurracy dio como resultado 0.58, es decir que el 58% de los titulares fueron clasificados correctamente y así presentando un todas las métricas de evaluación mejores resultados. 
 
