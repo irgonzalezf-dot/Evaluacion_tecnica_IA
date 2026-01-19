@@ -51,7 +51,7 @@ En base a los resultados obtenidos elegí como modelo final el de Regresión Log
 
 ## 4. API de inferencia
 Instrucciones para probar API:
-1. 
+1. Es necesario crear una carpeta con los archivos adjuntos (
 2. 
 3. 
 4
